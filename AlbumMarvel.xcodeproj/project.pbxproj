@@ -9,19 +9,28 @@
 /* Begin PBXBuildFile section */
 		B8A8EA1926CC0374002E0033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA1826CC0374002E0033 /* AppDelegate.swift */; };
 		B8A8EA1B26CC0374002E0033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA1A26CC0374002E0033 /* SceneDelegate.swift */; };
-		B8A8EA1D26CC0374002E0033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA1C26CC0374002E0033 /* ViewController.swift */; };
 		B8A8EA2026CC0374002E0033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA1E26CC0374002E0033 /* Main.storyboard */; };
 		B8A8EA2226CC0375002E0033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA2126CC0375002E0033 /* Assets.xcassets */; };
+		B8A8EA2D26CC48DA002E0033 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA2C26CC48DA002E0033 /* Launch Screen.storyboard */; };
+		B8A8EA3326CC5638002E0033 /* Bouncy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA3226CC5638002E0033 /* Bouncy.otf */; };
+		B8A8EA3626CC61DF002E0033 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA3526CC61DF002E0033 /* MenuViewController.swift */; };
+		B8A8EA3926CC6E87002E0033 /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA3726CC6E87002E0033 /* Album.storyboard */; };
+		B8A8EA3D26CC73E3002E0033 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA3C26CC73E3002E0033 /* AlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8A8EA1526CC0374002E0033 /* AlbumMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A8EA1826CC0374002E0033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A8EA1A26CC0374002E0033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B8A8EA1C26CC0374002E0033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8A8EA1F26CC0374002E0033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8A8EA2126CC0375002E0033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8A8EA2626CC0375002E0033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A8EA2C26CC48DA002E0033 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B8A8EA3126CC54D4002E0033 /* AlbumMarvel.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = AlbumMarvel.entitlements; sourceTree = "<group>"; };
+		B8A8EA3226CC5638002E0033 /* Bouncy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bouncy.otf; sourceTree = "<group>"; };
+		B8A8EA3526CC61DF002E0033 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B8A8EA3826CC6E87002E0033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AlbumMarvel/Base.lproj/Album.storyboard; sourceTree = "<group>"; };
+		B8A8EA3C26CC73E3002E0033 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +63,43 @@
 		B8A8EA1726CC0374002E0033 /* AlbumMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B8A8EA3B26CC73CB002E0033 /* Album */,
+				B8A8EA3A26CC73BE002E0033 /* Menu */,
+				B8A8EA3426CC5A64002E0033 /* ProjectInfos */,
+				B8A8EA3226CC5638002E0033 /* Bouncy.otf */,
 				B8A8EA1826CC0374002E0033 /* AppDelegate.swift */,
 				B8A8EA1A26CC0374002E0033 /* SceneDelegate.swift */,
-				B8A8EA1C26CC0374002E0033 /* ViewController.swift */,
-				B8A8EA1E26CC0374002E0033 /* Main.storyboard */,
 				B8A8EA2126CC0375002E0033 /* Assets.xcassets */,
-				B8A8EA2626CC0375002E0033 /* Info.plist */,
+				B8A8EA2C26CC48DA002E0033 /* Launch Screen.storyboard */,
 			);
 			path = AlbumMarvel;
+			sourceTree = "<group>";
+		};
+		B8A8EA3426CC5A64002E0033 /* ProjectInfos */ = {
+			isa = PBXGroup;
+			children = (
+				B8A8EA3126CC54D4002E0033 /* AlbumMarvel.entitlements */,
+				B8A8EA2626CC0375002E0033 /* Info.plist */,
+			);
+			path = ProjectInfos;
+			sourceTree = "<group>";
+		};
+		B8A8EA3A26CC73BE002E0033 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B8A8EA1E26CC0374002E0033 /* Main.storyboard */,
+				B8A8EA3526CC61DF002E0033 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B8A8EA3B26CC73CB002E0033 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				B8A8EA3726CC6E87002E0033 /* Album.storyboard */,
+				B8A8EA3C26CC73E3002E0033 /* AlbumViewController.swift */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,8 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A8EA2D26CC48DA002E0033 /* Launch Screen.storyboard in Resources */,
 				B8A8EA2226CC0375002E0033 /* Assets.xcassets in Resources */,
+				B8A8EA3326CC5638002E0033 /* Bouncy.otf in Resources */,
 				B8A8EA2026CC0374002E0033 /* Main.storyboard in Resources */,
+				B8A8EA3926CC6E87002E0033 /* Album.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A8EA1D26CC0374002E0033 /* ViewController.swift in Sources */,
+				B8A8EA3D26CC73E3002E0033 /* AlbumViewController.swift in Sources */,
 				B8A8EA1926CC0374002E0033 /* AppDelegate.swift in Sources */,
+				B8A8EA3626CC61DF002E0033 /* MenuViewController.swift in Sources */,
 				B8A8EA1B26CC0374002E0033 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +190,14 @@
 				B8A8EA1F26CC0374002E0033 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8A8EA3726CC6E87002E0033 /* Album.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8A8EA3826CC6E87002E0033 /* Base */,
+			);
+			name = Album.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -274,9 +324,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlbumMarvel/ProjectInfos/AlbumMarvel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UCZ959GPV;
-				INFOPLIST_FILE = AlbumMarvel/Info.plist;
+				INFOPLIST_FILE = AlbumMarvel/ProjectInfos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrielsouza.AlbumMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -293,9 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlbumMarvel/ProjectInfos/AlbumMarvel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UCZ959GPV;
-				INFOPLIST_FILE = AlbumMarvel/Info.plist;
+				INFOPLIST_FILE = AlbumMarvel/ProjectInfos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrielsouza.AlbumMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
