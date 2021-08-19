@@ -47,10 +47,12 @@ extension AlbumViewController: UICollectionViewDataSource {
             fatalError("CardCell doesn't exist")
         }
         guard let name = fetchedCharacter?[indexPath.row].name else {
-            fatalError("name doesn't exist")
+            fatalError("Name doesn't exist")
         }
         
-        cell.setup(with: Card(heroImage: fetchedImages[indexPath.row], heroName: name))
+        if let image = fetchedImages[name] {
+            cell.setup(with: Card(heroImage: image, heroName: name))
+        }
         
         return cell
     }

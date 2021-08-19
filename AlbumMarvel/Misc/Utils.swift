@@ -17,7 +17,6 @@ fileprivate var aView: UIView?
 extension UIViewController {
     
     func showSpinner () {
-        print("aaaaaa")
         aView = UIView(frame: self.view.frame)
         aView?.backgroundColor = #colorLiteral(red: 0.5723067522, green: 0.5723067522, blue: 0.5725490196, alpha: 0.7759001271)
         
@@ -37,10 +36,12 @@ extension UIViewController {
 
 //MARK: - Marvel's API Request
 var fetchedCharacter: [Character]? = nil
-var fetchedImages = [UIImage]()
+var fetchedImages: [String : CardImage] = [:]
+var cardsCollected: [String:Any]?
 extension UIViewController {
         
-    func searchCharacter (thenPresent finalVC: UIViewController?) {
+    func searchCharacter (thenPresent finalVC: UIViewController?) {        
+        
         // A long string which can change on a request-by-request basis
         let ts = String(Date().timeIntervalSince1970)
         //A md5 digest of the ts+privateKey+publicKey
@@ -71,12 +72,22 @@ extension UIViewController {
                 if let characters = fetchedCharacter {
                     if !characters.isEmpty { //Received at least 1 result
                         characters.forEach{ character in
+                            
                             guard let imageData = try? Data(contentsOf: self!.getImageURL(data: character.thumbnail)) else {
-                                fatalError("data doesn't exist")
+                                fatalError("Data doesn't exist")
                             }
-                            if let image = UIImage(data: imageData) {
-                                if !fetchedImages.contains(image) {
-                                    fetchedImages.append(image)
+                            if var image = UIImage(data: imageData) {
+                                if !self!.userHasCard(characterName: character.name) {
+                                    if fetchedImages[character.name] == nil {
+                                        if !self!.userHasCard(characterName: character.name) {
+                                            guard let grayImage = self!.grayFilter(image: image) else {
+                                                fatalError("Failed to apply filter in image \(image)")
+                                            }
+                                            image = grayImage
+                                        }
+                                        let cardImage = CardImage(image: image, isGray: true)
+                                        fetchedImages[character.name] = cardImage
+                                    }
                                 }
                             }
                         }
@@ -112,6 +123,32 @@ extension UIViewController {
         print("Image url: \(url)")
         
         return url
+    }
+    
+    func userHasCard(characterName name: String) -> Bool{
+        
+        if let cards = cardsCollected {
+            if cards[name] != nil {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func grayFilter (image: UIImage) -> UIImage? {
+        let context = CIContext(options: nil)
+        let filterName = "CIPhotoEffectTonal"
+        if let filter = CIFilter(name: filterName) {
+            filter.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+            if let output = filter.outputImage {
+                if let cgImage = context.createCGImage(output, from: output.extent) {
+                    return UIImage(cgImage: cgImage)
+                }
+            }
+        } else {
+            fatalError("Filter \"\(filterName)\" not encountered")
+        }
+        return nil
     }
 }
 

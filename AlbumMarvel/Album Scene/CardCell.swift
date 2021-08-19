@@ -8,8 +8,13 @@
 import UIKit
 
 struct Card {
-    var heroImage: UIImage
+    var heroImage: CardImage
     var heroName: String
+}
+
+struct CardImage {
+    var image:UIImage
+    var isGray:Bool
 }
 
 class CardCell: UICollectionViewCell {
@@ -22,7 +27,7 @@ class CardCell: UICollectionViewCell {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
         
-        self.heroImage.image = card.heroImage
+        self.heroImage.image = card.heroImage.image
         self.heroNameLbl.text = card.heroName
     }
     
