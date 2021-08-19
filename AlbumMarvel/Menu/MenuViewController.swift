@@ -8,10 +8,24 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+//    @IBOutlet var showAlbumBtn: UIButton!
+//    @IBOutlet var buyCardBtn: UIButton!
+//    @IBOutlet var buttonsMenu: UIView!
+    
+//    @IBAction func showAlbumPressed(_ sender: UIButton) {
+//        sender.isUserInteractionEnabled = false
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let itemsRounded = [self.showAlbumBtn, self.buyCardBtn, self.buttonsMenu]
+//        
+//        for itemRounded in itemsRounded {
+//            itemRounded?.layer.cornerRadius = 13
+//            itemRounded?.layer.masksToBounds = true
+//        }
+        
     }
     
 

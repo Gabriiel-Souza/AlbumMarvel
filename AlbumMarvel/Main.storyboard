@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MvF-64-BJk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bouncy.otf">
+            <string>Bouncy-ThinPERSONALUSEONLY</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--First LoadAPI View Controller-->
+        <scene sceneID="eSd-Gv-82s">
+            <objects>
+                <viewController id="MvF-64-BJk" customClass="FirstLoadAPIViewController" customModule="AlbumMarvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XP3-Lq-Gf0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="k92-SS-x9V">
+                                <rect key="frame" x="87" y="198" width="240" height="329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="udx-b6-FPp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Album!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Rz-vyH">
+                                <rect key="frame" x="91" y="406" width="232" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gmF-dX-D3T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.7661896373" green="0.22087445859999999" blue="0.19208484889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2kG-BD-Smo">
+                                <rect key="frame" x="188.5" y="582" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funny Sentences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-tm-uJU">
+                                <rect key="frame" x="20" y="627" width="374" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B1l-9J-fLQ"/>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.031372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2kG-BD-Smo" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="4lv-pP-bD8"/>
+                            <constraint firstItem="k92-SS-x9V" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="7iy-df-EDk"/>
+                            <constraint firstItem="k92-SS-x9V" firstAttribute="top" secondItem="B1l-9J-fLQ" secondAttribute="top" constant="154" id="Fyq-zU-Cfv"/>
+                            <constraint firstItem="yCU-Rz-vyH" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="URo-AY-vH1"/>
+                            <constraint firstItem="B1l-9J-fLQ" firstAttribute="bottom" secondItem="Nel-tm-uJU" secondAttribute="bottom" constant="209" id="dOx-T8-iqe"/>
+                            <constraint firstItem="B1l-9J-fLQ" firstAttribute="trailing" secondItem="Nel-tm-uJU" secondAttribute="trailing" constant="20" id="e2Z-bT-rMt"/>
+                            <constraint firstItem="yCU-Rz-vyH" firstAttribute="top" secondItem="k92-SS-x9V" secondAttribute="bottom" constant="-121" id="fDJ-FC-iAj"/>
+                            <constraint firstItem="Nel-tm-uJU" firstAttribute="top" secondItem="2kG-BD-Smo" secondAttribute="bottom" constant="8" symbolic="YES" id="kQo-t8-hS8"/>
+                            <constraint firstItem="Nel-tm-uJU" firstAttribute="leading" secondItem="B1l-9J-fLQ" secondAttribute="leading" constant="20" id="tAH-Z9-bbp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2kG-BD-Smo" id="n01-SN-isk"/>
+                        <outlet property="funnyLoadingLabel" destination="Nel-tm-uJU" id="XY0-6F-uFV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Skt-Gg-81p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="318.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoMarvel" width="819" height="329"/>
+    </resources>
+</document>
