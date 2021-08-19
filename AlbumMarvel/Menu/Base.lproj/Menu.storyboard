@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ggU-kd-gSe">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bouncy.otf">
+            <string>Bouncy-ThinPERSONALUSEONLY</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="X8q-gn-wij">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QO2-I1-MLI" userLabel="Home View Controller" customClass="MenuViewController" customModule="AlbumMarvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKk-j4-N1P">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundFull" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w0x-mk-Ukf">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="Uh3-Ed-7TZ">
+                                <rect key="frame" x="75" y="87" width="240" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="k2I-po-aNm"/>
+                                    <constraint firstAttribute="width" secondItem="Uh3-Ed-7TZ" secondAttribute="height" multiplier="240:97" id="w4O-aN-YtN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Album!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-Q5-H7r">
+                                <rect key="frame" x="79.333333333333329" y="176" width="231.66666666666669" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Jg5-J1-EUI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.7661896372663265" green="0.22087445859999999" blue="0.19208484889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d1m-z3-FSn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="top" secondItem="eKk-j4-N1P" secondAttribute="top" id="2uI-iE-D1N"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="bottom" secondItem="d1m-z3-FSn" secondAttribute="bottom" id="Oxc-gn-KCJ"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="trailing" secondItem="d1m-z3-FSn" secondAttribute="trailing" id="g7J-Oq-9Kc"/>
+                            <constraint firstItem="Fnf-Q5-H7r" firstAttribute="top" secondItem="Uh3-Ed-7TZ" secondAttribute="bottom" constant="-8" id="pSp-op-Zxt"/>
+                            <constraint firstItem="Fnf-Q5-H7r" firstAttribute="centerX" secondItem="d1m-z3-FSn" secondAttribute="centerX" id="qX8-X1-ypY"/>
+                            <constraint firstItem="Uh3-Ed-7TZ" firstAttribute="centerX" secondItem="d1m-z3-FSn" secondAttribute="centerX" id="qlh-63-nlb"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="leading" secondItem="d1m-z3-FSn" secondAttribute="leading" id="wL2-ZQ-EbK"/>
+                            <constraint firstItem="Uh3-Ed-7TZ" firstAttribute="top" secondItem="d1m-z3-FSn" secondAttribute="top" constant="43" id="z0n-pB-FcO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="7Ll-dK-7kO">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYA-QG-5wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.46153846153845" y="715.87677725118476"/>
+        </scene>
+        <!--Album Nav Controller-->
+        <scene sceneID="bHX-fN-dxR">
+            <objects>
+                <navigationController id="SaK-Mb-HuO" userLabel="Album Nav Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Album" image="book.fill" catalog="system" id="sMa-D7-uUA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" largeTitles="YES" id="Bpl-eb-75f">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="871-Hp-k6K" kind="relationship" relationship="rootViewController" id="AL4-vX-jjz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDe-Cb-BaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="716"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Rf-3K-y2k">
+            <objects>
+                <tabBarController storyboardIdentifier="MenuViewController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ggU-kd-gSe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o2X-KJ-dIf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QO2-I1-MLI" kind="relationship" relationship="viewControllers" id="1hp-sk-hXL"/>
+                        <segue destination="SaK-Mb-HuO" kind="relationship" relationship="viewControllers" id="Kfc-5v-vYp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-16-42a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="-18"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="1dC-ID-Ovl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Album" id="871-Hp-k6K" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="EnV-TH-KPm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxp-lV-Buv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="1141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundFull" width="3840" height="2160"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="logoMarvel" width="819" height="329"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
