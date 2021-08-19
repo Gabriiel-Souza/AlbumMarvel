@@ -51,13 +51,13 @@
                         <viewLayoutGuide key="safeArea" id="B1l-9J-fLQ"/>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.031372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="yCU-Rz-vyH" firstAttribute="top" secondItem="k92-SS-x9V" secondAttribute="bottom" constant="-121" id="3yk-wy-L3L"/>
                             <constraint firstItem="2kG-BD-Smo" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="4lv-pP-bD8"/>
                             <constraint firstItem="k92-SS-x9V" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="7iy-df-EDk"/>
                             <constraint firstItem="k92-SS-x9V" firstAttribute="top" secondItem="B1l-9J-fLQ" secondAttribute="top" constant="154" id="Fyq-zU-Cfv"/>
                             <constraint firstItem="yCU-Rz-vyH" firstAttribute="centerX" secondItem="XP3-Lq-Gf0" secondAttribute="centerX" id="URo-AY-vH1"/>
                             <constraint firstItem="B1l-9J-fLQ" firstAttribute="bottom" secondItem="Nel-tm-uJU" secondAttribute="bottom" constant="209" id="dOx-T8-iqe"/>
                             <constraint firstItem="B1l-9J-fLQ" firstAttribute="trailing" secondItem="Nel-tm-uJU" secondAttribute="trailing" constant="20" id="e2Z-bT-rMt"/>
-                            <constraint firstItem="yCU-Rz-vyH" firstAttribute="top" secondItem="k92-SS-x9V" secondAttribute="bottom" constant="-121" id="fDJ-FC-iAj"/>
                             <constraint firstItem="Nel-tm-uJU" firstAttribute="top" secondItem="2kG-BD-Smo" secondAttribute="bottom" constant="8" symbolic="YES" id="kQo-t8-hS8"/>
                             <constraint firstItem="Nel-tm-uJU" firstAttribute="leading" secondItem="B1l-9J-fLQ" secondAttribute="leading" constant="20" id="tAH-Z9-bbp"/>
                         </constraints>

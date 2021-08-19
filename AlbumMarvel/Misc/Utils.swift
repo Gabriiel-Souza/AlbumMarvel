@@ -47,6 +47,7 @@ extension UIViewController {
         let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
         //URL for get API info - Documentation can be found in https://developer.marvel.com/documentation/authorization
         let url = "http://gateway.marvel.com/v1/public/characters?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
+        print(url)
         let urlRequest = URLRequest(url: URL(string: url)!)
         //Create task to receive data from API
         URLSession.shared.dataTask(with: urlRequest) { [weak self] (data, _, error) in

@@ -68,11 +68,12 @@
         <!--Album Nav Controller-->
         <scene sceneID="bHX-fN-dxR">
             <objects>
-                <navigationController id="SaK-Mb-HuO" userLabel="Album Nav Controller" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="SaK-Mb-HuO" userLabel="Album Nav Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Album" image="book.fill" catalog="system" id="sMa-D7-uUA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" largeTitles="YES" id="Bpl-eb-75f">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" id="Bpl-eb-75f">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="871-Hp-k6K" kind="relationship" relationship="rootViewController" id="AL4-vX-jjz"/>
@@ -105,7 +106,7 @@
         <scene sceneID="1dC-ID-Ovl">
             <objects>
                 <viewControllerPlaceholder storyboardName="Album" id="871-Hp-k6K" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="EnV-TH-KPm"/>
+                    <navigationItem key="navigationItem" id="EnV-TH-KPm"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxp-lV-Buv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

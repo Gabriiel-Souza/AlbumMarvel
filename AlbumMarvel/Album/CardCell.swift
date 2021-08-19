@@ -18,6 +18,10 @@ class CardCell: UICollectionViewCell {
     @IBOutlet var heroNameLbl: UILabel!
     
     func setup (with card: Card){
+        
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        
         self.heroImage.image = card.heroImage
         self.heroNameLbl.text = card.heroName
     }

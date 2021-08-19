@@ -18,7 +18,6 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.backgroundColor = .clear
-        
         // Create the Refresh control when user push the top of screen
         self.collectionView.refreshControl = UIRefreshControl()
         self.collectionView.refreshControl?.addTarget(self,
