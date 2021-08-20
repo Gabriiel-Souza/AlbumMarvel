@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Album!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Rz-vyH">
-                                <rect key="frame" x="113.5" y="406" width="187.5" height="35"/>
+                                <rect key="frame" x="91" y="406" width="232" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="gmF-dX-D3T"/>
                                 </constraints>

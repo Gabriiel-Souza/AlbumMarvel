@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BBr-1W-Dvk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bouncy.otf">
+            <string>Bouncy-ThinPERSONALUSEONLY</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Get Cards-->
+        <scene sceneID="Qcs-mJ-KHr">
+            <objects>
+                <viewController id="BBr-1W-Dvk" customClass="BuyCardsViewController" customModule="AlbumMarvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAv-5C-the">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="32g-lF-uGP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mystery Card" translatesAutoresizingMaskIntoConstraints="NO" id="LQZ-go-iOa">
+                                        <rect key="frame" x="91.5" y="172" width="231" height="318"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="318" id="9uA-SF-a0h"/>
+                                            <constraint firstAttribute="width" constant="231" id="Y53-oR-aAp"/>
+                                            <constraint firstAttribute="width" secondItem="LQZ-go-iOa" secondAttribute="height" multiplier="77:106" id="spK-dk-WTV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4af-X0-jwS" userLabel="titleBackground">
+                                        <rect key="frame" x="91.5" y="432" width="231" height="58"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Hero name below image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-jQ-TyL">
+                                                <rect key="frame" x="20" y="8" width="191" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="1cq-Bf-gpc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="leading" secondItem="4af-X0-jwS" secondAttribute="leading" constant="20" id="0FL-e4-Hwb"/>
+                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerY" secondItem="4af-X0-jwS" secondAttribute="centerY" id="3QK-oC-5Yu"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ii-jQ-TyL" secondAttribute="trailing" constant="20" id="Uiv-RX-wsS"/>
+                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerX" secondItem="4af-X0-jwS" secondAttribute="centerX" id="kD4-pB-hKT"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-ie-u8f">
+                                        <rect key="frame" x="132" y="512" width="150" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="21"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Get a Card!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getCardButtonPressed:" destination="BBr-1W-Dvk" eventType="touchUpInside" id="HlM-rH-GR6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="9HR-Dj-zLy"/>
+                                <color key="backgroundColor" red="0.09106337279" green="0.28964072470000002" blue="0.32941812279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="4af-X0-jwS" firstAttribute="top" secondItem="LQZ-go-iOa" secondAttribute="top" constant="260" id="6bG-rV-kiA"/>
+                                    <constraint firstItem="4af-X0-jwS" firstAttribute="bottom" secondItem="LQZ-go-iOa" secondAttribute="bottom" id="Ax5-2K-3HL"/>
+                                    <constraint firstItem="4af-X0-jwS" firstAttribute="width" secondItem="LQZ-go-iOa" secondAttribute="width" id="O5g-4D-gTu"/>
+                                    <constraint firstItem="LQZ-go-iOa" firstAttribute="top" secondItem="9HR-Dj-zLy" secondAttribute="top" constant="128" id="h1M-mA-MZ6"/>
+                                    <constraint firstItem="LQZ-go-iOa" firstAttribute="centerX" secondItem="32g-lF-uGP" secondAttribute="centerX" id="ltV-4y-pyg"/>
+                                    <constraint firstItem="4af-X0-jwS" firstAttribute="centerX" secondItem="LQZ-go-iOa" secondAttribute="centerX" id="wKZ-Ls-86c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9we-zy-kAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Get Cards" image="cart.fill" catalog="system" id="1e4-ME-AsG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="characterNameLbl" destination="4Ii-jQ-TyL" id="HwY-4T-Dp7"/>
+                        <outlet property="mysteryCard" destination="LQZ-go-iOa" id="t4n-xp-72Z"/>
+                        <outlet property="titleBackground" destination="4af-X0-jwS" id="lEy-PD-NJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24d-Sr-G38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="-42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mystery Card" width="631" height="865"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

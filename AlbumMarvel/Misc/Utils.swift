@@ -10,6 +10,7 @@ import CryptoKit
 
 let privateKey = "70e74c7e6738689bfd1e705e1d7076a6cd090259"
 let publicKey = "1f365c5f372e1256346fa85e42271353"
+let changeImageCollorNotification = "change color"
 
 fileprivate var aView: UIView?
 
@@ -35,75 +36,88 @@ extension UIViewController {
 }
 
 //MARK: - Marvel's API Request
-var fetchedCharacter: [Character]? = nil
-var fetchedImages: [String : CardImage] = [:]
-var cardsCollected: [String:Any]?
+var cardCharacters: [Character]? = nil
+var cardImages: [String : (grayCard: UIImage?, normalCard: UIImage)] = [:]
+var cardsCollected: [String:Int]?
 extension UIViewController {
         
     func searchCharacter (thenPresent finalVC: UIViewController?) {        
-        
-        // A long string which can change on a request-by-request basis
-        let ts = String(Date().timeIntervalSince1970)
-        //A md5 digest of the ts+privateKey+publicKey
-        let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
-        //URL for get API info - Documentation can be found in https://developer.marvel.com/documentation/authorization
-        let url = "http://gateway.marvel.com/v1/public/characters?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
-        print(url)
-        let urlRequest = URLRequest(url: URL(string: url)!)
-        //Create task to receive data from API
-        URLSession.shared.dataTask(with: urlRequest) { [weak self] (data, _, error) in
-            guard let APIData = data, error == nil else {
-                print(error?.localizedDescription ?? "Unknown error from [AlbumViewController] -> URLSession.dataTask")
-                return
-            }
-            
-            do {
-                //Tells to Swift with class will receiva data and what is the data
-                var characters = try JSONDecoder().decode(APIResult.self, from: APIData)
-                // Tells to main thread execute this block
+        let maxComicNumber = 3
+        for comicNumber in 2...maxComicNumber {
+            // A long string which can change on a request-by-request basis
+            let ts = String(Date().timeIntervalSince1970)
+            //A md5 digest of the ts+privateKey+publicKey
+            let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
+            //URL for get API info - Documentation can be found in https://developer.marvel.com/documentation/authorization
+            let url = "http://gateway.marvel.com//v1/public/comics/\(comicNumber)/characters?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
+            let urlRequest = URLRequest(url: URL(string: url)!)
+            //Create task to receive data from API
+            URLSession.shared.dataTask(with: urlRequest) { [weak self] (data, _, error) in
+                guard let APIData = data, error == nil else {
+                    print(error?.localizedDescription ?? "Unknown error from [AlbumViewController] -> URLSession.dataTask")
+                    return
+                }
                 
-                if fetchedCharacter == nil {
+                var actualFetchedCharacter: [Character]?
+                do {
+                    //Tells to Swift with class will receiva data and what is the data
+                    var characters = try JSONDecoder().decode(APIResult.self, from: APIData)
                     //Remove character with image not available
                     characters.data.results.removeAll(where: { $0.thumbnail["path"] == "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
                     })
-                    fetchedCharacter = characters.data.results
-                }
-                
-                if let characters = fetchedCharacter {
-                    if !characters.isEmpty { //Received at least 1 result
-                        characters.forEach{ character in
-                            
-                            guard let imageData = try? Data(contentsOf: self!.getImageURL(data: character.thumbnail)) else {
-                                fatalError("Data doesn't exist")
-                            }
-                            if var image = UIImage(data: imageData) {
-                                if !self!.userHasCard(characterName: character.name) {
-                                    if fetchedImages[character.name] == nil {
-                                        if !self!.userHasCard(characterName: character.name) {
+                    actualFetchedCharacter = characters.data.results
+                    
+                    if let characters = actualFetchedCharacter {
+                        if !characters.isEmpty { //Received at least 1 result
+                            characters.forEach{ character in
+                                
+                                guard let imageData = try? Data(contentsOf: self!.getImageURL(data: character.thumbnail)) else {
+                                    fatalError("Data doesn't exist")
+                                }
+                                if var image = UIImage(data: imageData) {
+                                    let originalImage = image
+                                    if !self!.userHasCard(characterName: character.name) {
+                                        if cardImages[character.name] == nil {
+                                            
                                             guard let grayImage = self!.grayFilter(image: image) else {
                                                 fatalError("Failed to apply filter in image \(image)")
                                             }
                                             image = grayImage
+                                            cardImages[character.name] = (grayImage, originalImage)
                                         }
-                                        let cardImage = CardImage(image: image, isGray: true)
-                                        fetchedImages[character.name] = cardImage
+                                    } else {
+                                        cardImages[character.name] = (nil, originalImage)
+                                    }
+                                }
+                            }
+                        }
+                        if cardCharacters == nil {
+                            cardCharacters = actualFetchedCharacter
+                        } else {
+                            if let charactersArray = cardCharacters {
+                                for character in characters {
+                                    if !charactersArray.contains(where: {$0.name == character.name}) {
+                                        cardCharacters?.append(character)
                                     }
                                 }
                             }
                         }
                     }
+                } catch {
+                    print(error.localizedDescription)
                 }
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-            if let finalVC = finalVC {
-                DispatchQueue.main.async {
-                    self!.present(finalVC, animated: true, completion: nil)
+                
+                if comicNumber == maxComicNumber {
+                    if let finalVC = finalVC {
+                        DispatchQueue.main.async {
+                            print("Characters: \(cardCharacters?.count ?? 0)")
+                            print("Images: \(cardImages.count)")
+                            self!.present(finalVC, animated: true, completion: nil)
+                        }
+                    }
                 }
-            }
-            
-        }.resume()
+            }.resume()
+        }
     }
     //MARK: - Hash Method
     func MD5 (data: String) -> String {
@@ -119,8 +133,8 @@ extension UIViewController {
         
         let path = data["path"] ?? ""
         let extens = data["extension"] ?? ""
-        let url = URL(string: "\(path).\(extens)")!
-        print("Image url: \(url)")
+        let url = URL(string: "\(path)/portrait_fantastic.\(extens)")!
+//        print("Image url: \(url)")
         
         return url
     }
@@ -129,6 +143,7 @@ extension UIViewController {
         
         if let cards = cardsCollected {
             if cards[name] != nil {
+                print("User has \(name) card")
                 return true
             }
         }

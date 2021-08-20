@@ -22,12 +22,7 @@ class FirstLoadAPIViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Menu", bundle: nil)
         let mainVC = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
         self.searchCharacter(thenPresent: mainVC)
-    }
-    
-    deinit {
-        print("API LOADED")
-    }
-    
+    }    
 }
 
 

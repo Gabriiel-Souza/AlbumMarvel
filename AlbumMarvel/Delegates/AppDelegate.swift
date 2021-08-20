@@ -11,7 +11,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        cardsCollected = UserDefaults.standard.dictionary(forKey: "cardsCollected")
+        
+        if let cards = UserDefaults.standard.value(forKey: "cardsCollected") as? [String : Int] {
+            cardsCollected = cards
+        }
+        
         return true
     }
 

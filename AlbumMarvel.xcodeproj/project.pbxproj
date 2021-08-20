@@ -10,6 +10,8 @@
 		B8454F5426CF2554002B1BC2 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8454F5226CF2554002B1BC2 /* CardCell.swift */; };
 		B8454F5526CF2554002B1BC2 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8454F5326CF2554002B1BC2 /* AlbumViewController.swift */; };
 		B8454F5826CF2564002B1BC2 /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8454F5626CF2564002B1BC2 /* Album.storyboard */; };
+		B8454F5D26CF2BB6002B1BC2 /* BuyCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8454F5C26CF2BB6002B1BC2 /* BuyCard.storyboard */; };
+		B8454F5F26CF3668002B1BC2 /* BuyCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8454F5E26CF3668002B1BC2 /* BuyCardsViewController.swift */; };
 		B8A8EA1926CC0374002E0033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA1826CC0374002E0033 /* AppDelegate.swift */; };
 		B8A8EA1B26CC0374002E0033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA1A26CC0374002E0033 /* SceneDelegate.swift */; };
 		B8A8EA2026CC0374002E0033 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A8EA1E26CC0374002E0033 /* Menu.storyboard */; };
@@ -27,6 +29,8 @@
 		B8454F5226CF2554002B1BC2 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		B8454F5326CF2554002B1BC2 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		B8454F5726CF2564002B1BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Album.storyboard; sourceTree = "<group>"; };
+		B8454F5C26CF2BB6002B1BC2 /* BuyCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyCard.storyboard; sourceTree = "<group>"; };
+		B8454F5E26CF3668002B1BC2 /* BuyCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCardsViewController.swift; sourceTree = "<group>"; };
 		B8A8EA1526CC0374002E0033 /* AlbumMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A8EA1826CC0374002E0033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A8EA1A26CC0374002E0033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8454F5B26CF2B89002B1BC2 /* BuyCard */ = {
+			isa = PBXGroup;
+			children = (
+				B8454F5C26CF2BB6002B1BC2 /* BuyCard.storyboard */,
+				B8454F5E26CF3668002B1BC2 /* BuyCardsViewController.swift */,
+			);
+			path = BuyCard;
+			sourceTree = "<group>";
+		};
 		B8A8EA0C26CC0374002E0033 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 		B8A8EA1726CC0374002E0033 /* AlbumMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B8454F5B26CF2B89002B1BC2 /* BuyCard */,
 				B8A8EA3F26CC7A2D002E0033 /* Misc */,
 				B8A8EA3E26CC765C002E0033 /* Delegates */,
 				B8A8EA3B26CC73CB002E0033 /* Album */,
@@ -196,6 +210,7 @@
 				B8A8EA2226CC0375002E0033 /* Assets.xcassets in Resources */,
 				B8A8EA3326CC5638002E0033 /* Bouncy.otf in Resources */,
 				B8A8EA2026CC0374002E0033 /* Menu.storyboard in Resources */,
+				B8454F5D26CF2BB6002B1BC2 /* BuyCard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8454F5F26CF3668002B1BC2 /* BuyCardsViewController.swift in Sources */,
 				B8454F5426CF2554002B1BC2 /* CardCell.swift in Sources */,
 				B8B66AEB26CDBFA90094034A /* FirstLoadAPIViewController.swift in Sources */,
 				B8A8EA5026CD6B46002E0033 /* Utils.swift in Sources */,

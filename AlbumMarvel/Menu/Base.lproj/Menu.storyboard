@@ -83,6 +83,16 @@
             </objects>
             <point key="canvasLocation" x="828" y="716"/>
         </scene>
+        <!--BuyCard-->
+        <scene sceneID="FKW-Sg-XzM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BuyCard" id="NsX-ax-Tym" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Get Cards" image="cart.fill" catalog="system" id="9hB-k9-ENa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzh-UT-GKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="408"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7Rf-3K-y2k">
             <objects>
@@ -96,6 +106,7 @@
                     <connections>
                         <segue destination="QO2-I1-MLI" kind="relationship" relationship="viewControllers" id="1hp-sk-hXL"/>
                         <segue destination="SaK-Mb-HuO" kind="relationship" relationship="viewControllers" id="Kfc-5v-vYp"/>
+                        <segue destination="NsX-ax-Tym" kind="relationship" relationship="viewControllers" id="Nj2-PH-CF6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-16-42a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,6 +127,7 @@
     <resources>
         <image name="backgroundFull" width="3840" height="2160"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="logoMarvel" width="819" height="329"/>
         <systemColor name="systemBackgroundColor">
