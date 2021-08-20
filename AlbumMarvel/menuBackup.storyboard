@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pQz-YC-htb">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bouncy.otf">
+            <string>Bouncy-ThinPERSONALUSEONLY</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ftx-HT-AAA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pQz-YC-htb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Cf-21-tWI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundFull" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q96-ON-BO5">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="NaT-jV-6Cx">
+                                <rect key="frame" x="75" y="87" width="240" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="qLj-6B-SXL"/>
+                                    <constraint firstAttribute="width" secondItem="NaT-jV-6Cx" secondAttribute="height" multiplier="240:97" id="xrK-jY-47m"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Album!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD2-bR-gIB">
+                                <rect key="frame" x="79" y="176" width="232" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="riH-MO-y7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.7661896373" green="0.22087445859999999" blue="0.19208484889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-Rr-em9">
+                                <rect key="frame" x="71.666666666666686" y="537" width="247" height="147"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPI-vT-lf5">
+                                        <rect key="frame" x="10.333333333333329" y="14" width="226" height="46"/>
+                                        <color key="backgroundColor" red="0.85434931520000001" green="0.22087445859999999" blue="0.19208484889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="5Ct-dP-O4m"/>
+                                            <constraint firstAttribute="height" constant="46" id="jsi-j1-bBW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="31"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="SHOW ALBUM">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAlbumPressed:" destination="pQz-YC-htb" eventType="touchUpInside" id="wqZ-Ay-VdS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-1L-3CG" userLabel="Buy Card Btn">
+                                        <rect key="frame" x="39.333333333333329" y="82" width="168" height="45"/>
+                                        <color key="backgroundColor" red="0.85434931520000001" green="0.22087445859999999" blue="0.19208484889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="F81-qr-klb"/>
+                                            <constraint firstAttribute="height" constant="45" id="nOF-6s-4Hp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="31"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="BUY CARD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.32426270740000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WPI-vT-lf5" firstAttribute="top" secondItem="Pr6-Rr-em9" secondAttribute="top" constant="14" id="3kf-d2-6hf"/>
+                                    <constraint firstAttribute="bottom" secondItem="hyC-1L-3CG" secondAttribute="bottom" constant="20" symbolic="YES" id="TRq-6v-LpC"/>
+                                    <constraint firstAttribute="width" constant="247" id="Xnd-KZ-eKr"/>
+                                    <constraint firstAttribute="height" constant="147" id="ogP-7t-jlI"/>
+                                    <constraint firstItem="hyC-1L-3CG" firstAttribute="centerX" secondItem="Pr6-Rr-em9" secondAttribute="centerX" id="yJl-XM-o0C"/>
+                                    <constraint firstItem="WPI-vT-lf5" firstAttribute="centerX" secondItem="Pr6-Rr-em9" secondAttribute="centerX" id="ygR-eM-2mI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HLW-DK-TVW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NaT-jV-6Cx" firstAttribute="centerX" secondItem="HLW-DK-TVW" secondAttribute="centerX" id="5ym-1Y-Wo9"/>
+                            <constraint firstItem="HLW-DK-TVW" firstAttribute="bottom" secondItem="Pr6-Rr-em9" secondAttribute="bottom" constant="126" id="Fae-e7-7XZ"/>
+                            <constraint firstItem="vD2-bR-gIB" firstAttribute="top" secondItem="NaT-jV-6Cx" secondAttribute="bottom" constant="-8" id="MU0-px-iYc"/>
+                            <constraint firstItem="Pr6-Rr-em9" firstAttribute="centerX" secondItem="2Cf-21-tWI" secondAttribute="centerX" id="fiu-W0-rvr"/>
+                            <constraint firstItem="NaT-jV-6Cx" firstAttribute="top" secondItem="HLW-DK-TVW" secondAttribute="top" constant="43" id="ryc-jm-UsD"/>
+                            <constraint firstItem="vD2-bR-gIB" firstAttribute="centerX" secondItem="HLW-DK-TVW" secondAttribute="centerX" id="ydw-nF-piP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mfe-9L-mq6"/>
+                    <connections>
+                        <outlet property="buttonsMenu" destination="Pr6-Rr-em9" id="VFY-q0-Xeg"/>
+                        <outlet property="buyCardBtn" destination="hyC-1L-3CG" id="jTm-Au-T3W"/>
+                        <outlet property="showAlbumBtn" destination="WPI-vT-lf5" id="ATN-AV-E5R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqM-p9-jZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843.07692307692309" y="66.824644549763036"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundFull" width="3840" height="2160"/>
+        <image name="logoMarvel" width="819" height="329"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
