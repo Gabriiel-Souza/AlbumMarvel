@@ -12,6 +12,10 @@ let privateKey = "70e74c7e6738689bfd1e705e1d7076a6cd090259"
 let publicKey = "1f365c5f372e1256346fa85e42271353"
 let changeImageCollorNotification = "change color"
 
+enum ImageMode {
+    case portrait_fantastic, landscape_incredible
+}
+
 fileprivate var aView: UIView?
 
 //MARK: - Activity Indicator
@@ -42,14 +46,14 @@ var cardsCollected: [String:Int]?
 extension UIViewController {
         
     func searchCharacter (thenPresent finalVC: UIViewController?) {        
-        let maxComicNumber = 3
+        let maxComicNumber = 5
         for comicNumber in 2...maxComicNumber {
             // A long string which can change on a request-by-request basis
             let ts = String(Date().timeIntervalSince1970)
             //A md5 digest of the ts+privateKey+publicKey
             let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
             //URL for get API info - Documentation can be found in https://developer.marvel.com/documentation/authorization
-            let url = "http://gateway.marvel.com//v1/public/comics/\(comicNumber)/characters?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
+            let url = "http://gateway.marvel.com//v1/public/comics/\(comicNumber)/characters?orderBy=name&ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
             let urlRequest = URLRequest(url: URL(string: url)!)
             //Create task to receive data from API
             URLSession.shared.dataTask(with: urlRequest) { [weak self] (data, _, error) in
@@ -71,7 +75,7 @@ extension UIViewController {
                         if !characters.isEmpty { //Received at least 1 result
                             characters.forEach{ character in
                                 
-                                guard let imageData = try? Data(contentsOf: self!.getImageURL(data: character.thumbnail)) else {
+                                guard let imageData = try? Data(contentsOf: self!.getImageURL(data: character.thumbnail, mode: .portrait_fantastic)) else {
                                     fatalError("Data doesn't exist")
                                 }
                                 if var image = UIImage(data: imageData) {
@@ -129,11 +133,11 @@ extension UIViewController {
         }.joined()
     }
     
-    func getImageURL(data: [String: String]) -> URL {
+    func getImageURL(data: [String: String], mode: ImageMode) -> URL {
         
         let path = data["path"] ?? ""
         let extens = data["extension"] ?? ""
-        let url = URL(string: "\(path)/portrait_fantastic.\(extens)")!
+        let url = URL(string: "\(path)/\(mode).\(extens)")!
 //        print("Image url: \(url)")
         
         return url

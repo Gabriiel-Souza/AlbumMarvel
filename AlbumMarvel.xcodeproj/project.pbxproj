@@ -23,6 +23,8 @@
 		B8A8EA5026CD6B46002E0033 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A8EA4F26CD6B46002E0033 /* Utils.swift */; };
 		B8B66AEB26CDBFA90094034A /* FirstLoadAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B66AEA26CDBFA90094034A /* FirstLoadAPIViewController.swift */; };
 		B8B66AED26CDC4BE0094034A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B66AEC26CDC4BE0094034A /* Main.storyboard */; };
+		B8EEF5B426D01ABE00C93736 /* CharacterPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EEF5B326D01ABE00C93736 /* CharacterPopupViewController.swift */; };
+		B8EEF5B626D01AC900C93736 /* CharacterPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EEF5B526D01AC900C93736 /* CharacterPopup.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		B8A8EA4F26CD6B46002E0033 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B8B66AEA26CDBFA90094034A /* FirstLoadAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoadAPIViewController.swift; sourceTree = "<group>"; };
 		B8B66AEC26CDC4BE0094034A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B8EEF5B326D01ABE00C93736 /* CharacterPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPopupViewController.swift; sourceTree = "<group>"; };
+		B8EEF5B526D01AC900C93736 /* CharacterPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CharacterPopup.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		B8A8EA1726CC0374002E0033 /* AlbumMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B8EEF5B226D0196B00C93736 /* CharacterPopup */,
 				B8454F5B26CF2B89002B1BC2 /* BuyCard */,
 				B8A8EA3F26CC7A2D002E0033 /* Misc */,
 				B8A8EA3E26CC765C002E0033 /* Delegates */,
@@ -147,6 +152,15 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		B8EEF5B226D0196B00C93736 /* CharacterPopup */ = {
+			isa = PBXGroup;
+			children = (
+				B8EEF5B326D01ABE00C93736 /* CharacterPopupViewController.swift */,
+				B8EEF5B526D01AC900C93736 /* CharacterPopup.storyboard */,
+			);
+			path = CharacterPopup;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8A8EA2D26CC48DA002E0033 /* Launch Screen.storyboard in Resources */,
+				B8EEF5B626D01AC900C93736 /* CharacterPopup.storyboard in Resources */,
 				B8454F5826CF2564002B1BC2 /* Album.storyboard in Resources */,
 				B8B66AED26CDC4BE0094034A /* Main.storyboard in Resources */,
 				B8A8EA2226CC0375002E0033 /* Assets.xcassets in Resources */,
@@ -224,6 +239,7 @@
 				B8454F5F26CF3668002B1BC2 /* BuyCardsViewController.swift in Sources */,
 				B8454F5426CF2554002B1BC2 /* CardCell.swift in Sources */,
 				B8B66AEB26CDBFA90094034A /* FirstLoadAPIViewController.swift in Sources */,
+				B8EEF5B426D01ABE00C93736 /* CharacterPopupViewController.swift in Sources */,
 				B8A8EA5026CD6B46002E0033 /* Utils.swift in Sources */,
 				B8A8EA1926CC0374002E0033 /* AppDelegate.swift in Sources */,
 				B8454F5526CF2554002B1BC2 /* AlbumViewController.swift in Sources */,
