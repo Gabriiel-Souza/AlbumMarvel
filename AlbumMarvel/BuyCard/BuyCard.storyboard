@@ -20,68 +20,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="32g-lF-uGP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mystery Card" translatesAutoresizingMaskIntoConstraints="NO" id="LQZ-go-iOa">
-                                        <rect key="frame" x="91.5" y="172" width="231" height="318"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="231" id="GBt-XG-m0Z"/>
-                                            <constraint firstAttribute="height" constant="318" id="UO8-aW-qO0"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4af-X0-jwS" userLabel="titleBackground">
-                                        <rect key="frame" x="91.5" y="432" width="231" height="58"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Hero name below image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-jQ-TyL">
-                                                <rect key="frame" x="20" y="8" width="191" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="1cq-Bf-gpc"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="leading" secondItem="4af-X0-jwS" secondAttribute="leading" constant="20" id="0FL-e4-Hwb"/>
-                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerY" secondItem="4af-X0-jwS" secondAttribute="centerY" id="3QK-oC-5Yu"/>
-                                            <constraint firstAttribute="trailing" secondItem="4Ii-jQ-TyL" secondAttribute="trailing" constant="20" id="Uiv-RX-wsS"/>
-                                            <constraint firstAttribute="height" constant="58" id="XCI-oc-T1c"/>
-                                            <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerX" secondItem="4af-X0-jwS" secondAttribute="centerX" id="kD4-pB-hKT"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-ie-u8f">
-                                        <rect key="frame" x="140.5" y="512" width="133" height="31"/>
-                                        <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="21"/>
-                                        <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Get a Card!">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="getCardButtonPressed:" destination="BBr-1W-Dvk" eventType="touchUpInside" id="HlM-rH-GR6"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="9HR-Dj-zLy"/>
-                                <color key="backgroundColor" red="0.090196078431372548" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mystery Card" translatesAutoresizingMaskIntoConstraints="NO" id="LQZ-go-iOa">
+                                <rect key="frame" x="77.5" y="104" width="259" height="354.5"/>
                                 <constraints>
-                                    <constraint firstItem="4af-X0-jwS" firstAttribute="width" secondItem="LQZ-go-iOa" secondAttribute="width" id="0sg-6Q-3jm"/>
-                                    <constraint firstItem="4af-X0-jwS" firstAttribute="centerX" secondItem="LQZ-go-iOa" secondAttribute="centerX" id="4O6-of-V2Z"/>
-                                    <constraint firstItem="LQZ-go-iOa" firstAttribute="centerX" secondItem="32g-lF-uGP" secondAttribute="centerX" id="I6g-xx-rgY"/>
-                                    <constraint firstItem="iHd-ie-u8f" firstAttribute="top" secondItem="LQZ-go-iOa" secondAttribute="bottom" constant="22" id="LrK-Xy-Nsg"/>
-                                    <constraint firstItem="iHd-ie-u8f" firstAttribute="centerX" secondItem="32g-lF-uGP" secondAttribute="centerX" id="Pry-zM-PmR"/>
-                                    <constraint firstItem="4af-X0-jwS" firstAttribute="top" secondItem="LQZ-go-iOa" secondAttribute="bottom" constant="-58" id="qBM-hU-yzM"/>
+                                    <constraint firstAttribute="width" secondItem="LQZ-go-iOa" secondAttribute="height" multiplier="0.731638" id="70l-GC-JKX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-ie-u8f">
+                                <rect key="frame" x="140.5" y="487" width="133" height="31"/>
+                                <fontDescription key="fontDescription" name="Bouncy-ThinPERSONALUSEONLY" family="Bouncy" pointSize="21"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="Get a Card!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCardButtonPressed:" destination="BBr-1W-Dvk" eventType="touchUpInside" id="HlM-rH-GR6"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4af-X0-jwS" userLabel="titleBackground">
+                                <rect key="frame" x="77.5" y="400.5" width="259" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Hero name below image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-jQ-TyL">
+                                        <rect key="frame" x="10" y="8" width="239" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="7qf-8r-3Wg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerX" secondItem="4af-X0-jwS" secondAttribute="centerX" id="9ss-wG-w4q"/>
+                                    <constraint firstAttribute="height" constant="58" id="AlE-wQ-43C"/>
+                                    <constraint firstItem="4Ii-jQ-TyL" firstAttribute="leading" secondItem="4af-X0-jwS" secondAttribute="leading" constant="10" id="PxD-Fh-LNN"/>
+                                    <constraint firstItem="4Ii-jQ-TyL" firstAttribute="centerY" secondItem="4af-X0-jwS" secondAttribute="centerY" id="qZb-tE-qtB"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Ii-jQ-TyL" secondAttribute="trailing" constant="10" id="ya7-Ob-e2t"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9we-zy-kAI"/>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="9we-zy-kAI" firstAttribute="bottom" secondItem="LQZ-go-iOa" secondAttribute="bottom" constant="323" id="9Mu-ob-Kyh"/>
+                            <constraint firstItem="LQZ-go-iOa" firstAttribute="centerX" secondItem="EAv-5C-the" secondAttribute="centerX" id="1Oe-mW-IR3"/>
+                            <constraint firstItem="LQZ-go-iOa" firstAttribute="top" secondItem="9we-zy-kAI" secondAttribute="top" constant="60" id="3Fw-88-sox"/>
+                            <constraint firstItem="9we-zy-kAI" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="LQZ-go-iOa" secondAttribute="bottom" constant="-30" id="CCo-R3-nXJ"/>
+                            <constraint firstItem="iHd-ie-u8f" firstAttribute="centerX" secondItem="EAv-5C-the" secondAttribute="centerX" id="EC7-E6-lUq"/>
+                            <constraint firstItem="4af-X0-jwS" firstAttribute="width" secondItem="LQZ-go-iOa" secondAttribute="width" id="JTU-JO-c1m"/>
+                            <constraint firstItem="4af-X0-jwS" firstAttribute="trailing" secondItem="LQZ-go-iOa" secondAttribute="trailing" id="ViF-U5-Ebt"/>
+                            <constraint firstItem="4af-X0-jwS" firstAttribute="leading" secondItem="LQZ-go-iOa" secondAttribute="leading" id="nVk-L3-Kg9"/>
+                            <constraint firstItem="iHd-ie-u8f" firstAttribute="top" secondItem="LQZ-go-iOa" secondAttribute="bottom" constant="28.5" id="wso-T2-J9i"/>
+                            <constraint firstItem="4af-X0-jwS" firstAttribute="bottom" secondItem="LQZ-go-iOa" secondAttribute="bottom" id="zVK-I9-P8B"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Get Cards" image="cart.fill" catalog="system" id="1e4-ME-AsG"/>
@@ -94,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24d-Sr-G38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="-42"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="-42.1875"/>
         </scene>
     </scenes>
     <resources>

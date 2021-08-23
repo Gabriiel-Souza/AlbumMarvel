@@ -16,8 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="wJb-SW-PkE">
-                                <rect key="frame" x="87" y="198" width="240" height="329"/>
+                                <rect key="frame" x="87" y="400.5" width="240" height="95"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="wJb-SW-PkE" secondAttribute="height" multiplier="48:19" id="Boa-91-bON"/>
                                     <constraint firstAttribute="width" constant="240" id="Vbb-lg-RMr"/>
                                 </constraints>
                             </imageView>
@@ -26,7 +27,7 @@
                         <color key="backgroundColor" red="0.022282969296246284" green="0.031739038111272884" blue="0.11294733457835393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wJb-SW-PkE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XrW-La-RXJ"/>
-                            <constraint firstItem="wJb-SW-PkE" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="154" id="e8x-1c-DjW"/>
+                            <constraint firstItem="wJb-SW-PkE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ebt-Lu-Vhi"/>
                         </constraints>
                     </view>
                 </viewController>

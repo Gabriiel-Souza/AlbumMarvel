@@ -47,13 +47,13 @@
                         <viewLayoutGuide key="safeArea" id="d1m-z3-FSn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="top" secondItem="eKk-j4-N1P" secondAttribute="top" id="2uI-iE-D1N"/>
-                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="bottom" secondItem="d1m-z3-FSn" secondAttribute="bottom" id="Oxc-gn-KCJ"/>
-                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="trailing" secondItem="d1m-z3-FSn" secondAttribute="trailing" id="g7J-Oq-9Kc"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="bottom" secondItem="d1m-z3-FSn" secondAttribute="bottom" id="RRh-Oc-SbA"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="leading" secondItem="eKk-j4-N1P" secondAttribute="leading" id="eAR-BM-i2Q"/>
                             <constraint firstItem="Fnf-Q5-H7r" firstAttribute="top" secondItem="Uh3-Ed-7TZ" secondAttribute="bottom" constant="-8" id="pSp-op-Zxt"/>
                             <constraint firstItem="Fnf-Q5-H7r" firstAttribute="centerX" secondItem="d1m-z3-FSn" secondAttribute="centerX" id="qX8-X1-ypY"/>
                             <constraint firstItem="Uh3-Ed-7TZ" firstAttribute="centerX" secondItem="d1m-z3-FSn" secondAttribute="centerX" id="qlh-63-nlb"/>
-                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="leading" secondItem="d1m-z3-FSn" secondAttribute="leading" id="wL2-ZQ-EbK"/>
+                            <constraint firstItem="w0x-mk-Ukf" firstAttribute="top" secondItem="eKk-j4-N1P" secondAttribute="top" id="tD1-3L-Wve"/>
+                            <constraint firstAttribute="trailing" secondItem="w0x-mk-Ukf" secondAttribute="trailing" id="yz5-gS-qWN"/>
                             <constraint firstItem="Uh3-Ed-7TZ" firstAttribute="top" secondItem="d1m-z3-FSn" secondAttribute="top" constant="43" id="z0n-pB-FcO"/>
                         </constraints>
                     </view>
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYA-QG-5wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138.46153846153845" y="715.87677725118476"/>
+            <point key="canvasLocation" x="-138.6255924170616" y="715.38461538461536"/>
         </scene>
         <!--Album Nav Controller-->
         <scene sceneID="bHX-fN-dxR">
