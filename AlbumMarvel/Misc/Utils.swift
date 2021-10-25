@@ -8,8 +8,8 @@
 import UIKit
 import CryptoKit
 
-let privateKey = "70e74c7e6738689bfd1e705e1d7076a6cd090259"
-let publicKey = "1f365c5f372e1256346fa85e42271353"
+let privateKey = "*****"
+let publicKey = "*****"
 let changeImageCollorNotification = "change color"
 
 enum ImageMode {
